@@ -81,7 +81,7 @@ const Dashboard=()=>{
                     <StatBox
                         title="43,975"
                         subtitle="Sales obtained"
-                        progress="0.75"
+                        progress="0.25"
                         increase="+35%"
                         icon={
                             <PointOfSaleIcon
@@ -103,7 +103,7 @@ const Dashboard=()=>{
                     <StatBox
                         title="98,352"
                         subtitle="New Cients"
-                        progress="0.75"
+                        progress="0.55"
                         increase="+11%"
                         icon={
                             <PersonAddIcon 
@@ -280,13 +280,12 @@ const Dashboard=()=>{
                     gridColumn="span 4"
                     gridRow="span 2"
                     backgroundColor={colors.primary[400]}
+                    p="30px"
                 >
                     <Typography
                         variant="h5"
                         fontWeight="600"
-                        sx={{
-                            p:"30px 30px 0 30px"
-                        }}
+
                     >
                         Sales Quantity
                     </Typography>

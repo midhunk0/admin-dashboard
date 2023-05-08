@@ -40,7 +40,7 @@ const Sidebar=()=>{
     const [selected, setSelected]=useState("Dashboard");
 
     return (
-        <Box
+        <Box height="980px"
             sx={{
                 "& .pro-sidebar-inner":{
                     background:`${colors.primary[400]}!important`
