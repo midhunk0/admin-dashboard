@@ -1,3 +1,4 @@
+import React from "react";
 import {Box, IconButton, useTheme} from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
@@ -23,8 +24,8 @@ const Topbar=()=>{
             {/*search bar*/}
             <Box 
                 display="flex" 
-                backgroundColor={colors.primary[400]}
-                borderRadius="3px"
+                style={{backgroundColor:colors.primary[400]}}
+                borderRadius="19px"
             >
                 <InputBase sx={{ml:2, flex:1}} placeholder="Search"/>
                 <IconButton type="button" sx={{p:1}}>

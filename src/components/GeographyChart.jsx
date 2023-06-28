@@ -1,3 +1,4 @@
+import React from "react";
 import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
 import { ResponsiveChoropleth } from "@nivo/geo"
