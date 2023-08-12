@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
@@ -14,8 +15,8 @@ import {
     Typography,
     useTheme
 } from "@mui/material"
-import Header from "../../components/Header"
-import { tokens } from "../../theme";
+import Header from "../components/Header"
+import { tokens } from "../theme";
 
 const Calendar=()=>{
     const theme=useTheme();
@@ -106,9 +107,9 @@ const Calendar=()=>{
                             listPlugin
                         ]}
                         headerToolbar={{
-                            start:"prev,next today",
+                            start:"prev next today",
                             center:"title",
-                            end:"dayGridMonth,timeGridWeek,timeGridDay,listMonth"
+                            end:"dayGridMonth timeGridWeek timeGridDay listMonth"
                         }}
                         initialView="dayGridMonth"
                         editable={true}

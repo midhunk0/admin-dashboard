@@ -1,11 +1,13 @@
+// @ts-nocheck
 import React from "react";
-import { Box, Typography, useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
-import { tokens } from "../../theme";
-import { mockDataInvoices } from "../../data/mockData"
-import Header from "../../components/Header";
+import { Box } from "@mui/material";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { tokens } from "../theme";
+import { mockDataContacts } from "../data/mockData"
+import Header from "../components/Header";
+import { useTheme } from "@mui/material";
 
-const Invoices=()=>{
+const Contacts=()=>{
     const theme=useTheme();
     const colors=tokens(theme.palette.mode);
 
@@ -16,10 +18,21 @@ const Invoices=()=>{
             flex:0.5
         },
         {
+            field:"registrarId",
+            headerName:"Registrar ID"
+        },
+        {
             field:"name",
             headerName:"Name",
             flex:1,
             cellClassName:"name-column-cell"
+        },
+        {
+            field:"age",
+            headerName:"Age",
+            type:"number",
+            headerAlign:"left",
+            align:"left"
         },
         {
             field:"phone",
@@ -32,18 +45,18 @@ const Invoices=()=>{
             flex:1
         },
         {
-            field:"cost",
-            headerName:"Cost",
-            flex:1,
-            renderCell:(params)=>{
-                <Typography color={colors.greenAccent[500]}>
-                    ${params.row.cost}
-                </Typography>
-            }
+            field:"address",
+            headerName:"Address",
+            flex:1
         },
         {
-            field:"date",
-            headerName:"Date",
+            field:"city",
+            headerName:"City",
+            flex:1
+        },
+        {
+            field:"zipCode",
+            headerName:"ZipCode",
             flex:1
         }
     ];
@@ -51,8 +64,8 @@ const Invoices=()=>{
     return(
         <Box m="20px">
             <Header 
-                title="INVOICES" 
-                subtitle="List of Invoices Balances"
+                title="CONTACTS" 
+                subtitle="List of Contacts for Future Reference"
             />
                 <Box
                     m="40px 0 0 0"
@@ -70,8 +83,8 @@ const Invoices=()=>{
                         "& .MuiDataGrid-columnHeaders":{
                             backgroundColor:colors.blueAccent[700],
                             borderBottom:"none",
-                            // borderTopLeftRadius:"4px",
-                            // borderTopRightRadius:"4px"
+                            borderTopLeftRadius:"4px",
+                            borderTopRightRadius:"4px"
                         },
                         "& .MuiDataGrid-virtualScroller":{
                             backgroundColor:colors.primary[400]
@@ -83,22 +96,22 @@ const Invoices=()=>{
                             borderBottomLeftRadius:"4px",
                             borderBottomRightRadius:"4px"
                         },
-                        // "& .MuiCheckbox-root":{
-                        //     color:`${colors.greenAccent[200]} !important`
-                        // },
                         "& .MuiCheckbox-root":{
-                            color:`${colors.greenAccent[200]}`
+                            color:`${colors.greenAccent[200]} !important`
+                        },
+                        "& .MuiDataGrid-toolbarContainer .MuiButton-text":{
+                            color:`${colors.gray[100]}!important`
                         }
                     }}
                 >
                     <DataGrid
-                        checkboxSelection
-                        rows={mockDataInvoices}
+                        rows={mockDataContacts}
                         columns={columns}
+                        slots={{toolbar:GridToolbar}}
                     />
                 </Box>
         </Box>
     )
 };
 
-export default Invoices;
+export default Contacts;

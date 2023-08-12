@@ -1,7 +1,7 @@
 import React from "react";
 import {Box, IconButton, useTheme} from "@mui/material";
 import { useContext } from "react";
-import { ColorModeContext, tokens } from "../../theme";
+import { ColorModeContext, tokens } from "../theme";
 import InputBase from "@mui/material/InputBase";
 import LightModeOutLinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutLinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -16,19 +16,11 @@ const Topbar=()=>{
     const colorMode=useContext(ColorModeContext);
 
     return (
-        <Box 
-            display="flex" 
-            justifyContent="space-between" 
-            padding={2}
-        >
+        <Box display="flex" justifyContent="space-between" padding={2.5} >
             {/*search bar*/}
-            <Box 
-                display="flex" 
-                style={{backgroundColor:colors.primary[400]}}
-                borderRadius="19px"
-            >
+            <Box display="flex" style={{backgroundColor:colors.primary[400]}}>
                 <InputBase sx={{ml:2, flex:1}} placeholder="Search"/>
-                <IconButton type="button" sx={{p:1}}>
+                <IconButton disableRipple type="button" sx={{p:1}}>
                     <SearchIcon/>
                 </IconButton>
             </Box>
