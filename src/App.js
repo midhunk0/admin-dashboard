@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from "react";
-import { ColorModeContext, useMode } from "./theme";
+import { ColorModeContext, useMode } from "./data/theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Routes,Route } from "react-router-dom";
 import Topbar from "./scenes/Topbar";

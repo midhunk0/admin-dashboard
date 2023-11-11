@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React from "react";
 import { ResponsiveLine } from "@nivo/line";
-import { mockLineData as data } from "../data/mockData";
+import { mockLineData as data } from "../mockData";
 import { tokens } from "../theme";
 import { useTheme } from "@mui/material"; 
 

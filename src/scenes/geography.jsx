@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, useTheme } from "@mui/material";
-import Header from "../components/Header";
-import GeographyChart from "../components/GeographyChart";
-import { tokens } from "../theme";
+import Header from "../data/components/Header";
+import GeographyChart from "../data/components/GeographyChart";
+import { tokens } from "../data/theme";
 
 const Geography=()=>{
     const theme=useTheme();

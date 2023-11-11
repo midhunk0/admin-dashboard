@@ -1,9 +1,10 @@
+// @ts-nocheck
 import React from "react";
 import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
 import { ResponsiveChoropleth } from "@nivo/geo"
-import { mockGeographyData as data } from "../data/mockData";
-import { geoFeatures } from "../data/mockGeoFeatures";
+import { mockGeographyData as data } from "../mockData";
+import { geoFeatures } from "../mockGeoFeatures";
 
 const GeographyChart=({isDashboard=false})=>{
     const theme=useTheme();
