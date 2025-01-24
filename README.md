@@ -14,10 +14,15 @@ To run the Admin Dashboard locally, follow these steps:
     ```bash
     cd admin-dashboard
     ```
-3. Run this in terminal
+3. Install the dependencies
+    ```bash
+    yarn add
+    ```
+4. Start the server
     ```bash
     yarn start
     ```
+5. Open browser and navigate to `http://localhost:3000`
    
 
 ## Usage
