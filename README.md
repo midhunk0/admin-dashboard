@@ -1,5 +1,7 @@
 # Admin Dashboard
 
+![adminis](https://github.com/user-attachments/assets/f3ce2630-a0df-4187-af86-af2391437e19)
+
 ## Introduction
 This project is the UI of an admin dashboard that displays various types of data in different visual formats, providing a comprehensive view and management capabilities for administrative tasks.
 
